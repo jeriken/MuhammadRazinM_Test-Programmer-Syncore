@@ -38,4 +38,3 @@ Route::get('home', [UserController::class, 'index'])->name('home')->middleware('
 Route::get('actionlogout', [UserController::class, 'actionlogout'])->name('action\logout')->middleware('auth');
 
 Route::get('admin', [UserController::class, 'index'])->name('admin')->middleware(['auth', 'admin']);
-Route::get('actionadmin', [UserController::class, 'actionadmin'])->name('actionadmin')->middleware(['auth', 'admin']);

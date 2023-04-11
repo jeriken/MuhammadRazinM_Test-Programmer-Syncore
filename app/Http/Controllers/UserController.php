@@ -71,6 +71,16 @@ class UserController extends Controller
         return redirect('/');
     }
 
+    public function admin()
+    {
+        if (Auth::check()) {
+            $data = User::all();
+            return view('admin');
+        } else {
+            return view('login');
+        }
+    }
+
     public function actionlogout()
     {
         Auth::logout();
